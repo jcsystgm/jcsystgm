@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TGM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- dialog -->
+  <div id="dialog" class="dialog" style="display: none;">
+    <div class="dialog-content">
+      <img src="images/kojitou.png" style="margin-right: 10px;">
+      <span class="close-button" onclick="closeDialog()">&times;</span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <div class="row">
+        <a class="navbar-brand d-flex align-items-center " href="index.html"><img src="images/logo.png"
+            style="margin-right: 10px;">
+          <span style="color: #E8DD95; font-size: 24px;">株式会社ＴＧマネジメント</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+          aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item "><a href="index.html" class="nav-link" style="font-size: 20px;">ホーム</a></li>
+          <li class="nav-item "><a href="about.html" class="nav-link" style="font-size: 20px;">会社情報</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link" style="font-size: 20px;">サービス</a></li>
+          <li class="nav-item"><a href="properties.html" class="nav-link" style="font-size: 20px;">物件情報</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link" style="font-size: 20px;">お問合せ</a></li>
+          <li class="nav-item">
+            <div class="dropdown nav-link">
+              <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                style="font-size: 20px;">
+                言語
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">日本語</a></li>
+                <li><a class="dropdown-item" href="#">简体中文</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </nav>
+  <!-- END nav -->
+
+  <!-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg1_2.jpg');"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+        <div class="col-md-9 ftco-animate pb-0 text-center">
+          <h1 class="mb-3 bread">物件情報</h1>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- 详情 -->
+  <section class="ftco-section ftco-no-pb">
+    <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+      <div style="margin-bottom: 80px; font-weight: bold; font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div class="row">
+        <p class="mb-2"
+          style="font-size: 20px; font-weight:350;  background-color: #E8E4E4; border-radius: 30px; padding: 5px;">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中古マンション&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <h2 class="mb-2" style="font-size: 25px; font-weight:700">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新築マンション&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 wrap-about py-md-12 ftco-animate">
+          <div class="heading-section pr-md-12">
+            <!-- <div style="margin-bottom: 80px; font-weight: bold; font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+            <!-- <div style="padding-bottom: 80px;  text-align: center; line-height: 80px;">&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+            <table style="border-spacing: 10px 0;">
+              <tbody>
+                <tr>
+                  <td class="col-md-2" style="text-align: left; border: 10px solid #ffffff" bgcolor="#E8E4E4">価 格</td>
+                  <td class="col-md-2" style="text-align: left; border: 10px solid #ffffff">
+                    <span style="font-size: 30px; font-weight:700; color: #ff0000;">15,300</span>万円
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="col-md-2" style="text-align: left; border: 10px solid #ffffff" bgcolor="#E8E4E4">管理費等</td>
+                  <td class="col-md-2" style="text-align: left; border: 10px solid #ffffff"> 20,600円 </td>
+                  <td class="col-md-2" style="text-align: left; border: 10px solid #ffffff" bgcolor="#E8E4E4">修繕 積立金
+                  </td>
+                  <td class="col-md-2" style="text-align: left; border: 10px solid #ffffff"> 10,200円 </td>
+                </tr>
+                <tr>
+                  <td class="col-md-2" style="text-align: left; border: 10px solid #ffffff" bgcolor="#E8E4E4">階建・階
+                  </td>
+                  <td class="col-md-2" style="text-align: left; border: 10px solid #ffffff">36階・16階
+                  </td>
+                  <td class="col-md-2" style="text-align: left; border: 10px solid #ffffff" bgcolor="#E8E4E4">使用部分面積
+                  </td>
+                  <td class="col-md-2" style="text-align: left; border: 10px solid #ffffff">
+                    壁芯&nbsp;&nbsp;&nbsp;&nbsp;85.31㎡
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="ftco-section ftco-no-pb">
+    <!-- <div class="container" style="margin-top: 20px; margin-bottom: 20px;"> -->
+    <div class="container">
+      <div class="row">
+        <h2 class="mb-2" style="font-size: 40px; font-weight:700">物件写真</h2>
+        <div class="container" style="margin-top: 10px; margin-bottom: 10px;"></div>
+      </div>
+      <div class="slider">
+        <div class="slider-container">
+          <!-- JavaScript将在这里动态插入图片元素 -->
+        </div>
+        <div class="slider-controls">
+          <button class="prev" style="background-color: #FFFF66;">←前のページ</button>
+          <button class="next" style="background-color: #FFFF66;">次のページ→</button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="ftco-section ftco-no-pt">
+    <!-- <div style="padding-bottom: 80px;  text-align: center; line-height: 80px;">&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+    <div class="container">
+      <div class="row">
+        <div class="container" style="margin-top: 10px; margin-bottom: 10px;"></div>
+        <h2 class="mb-2" style="font-size: 40px; font-weight:700">物件詳情</h2>
+      </div>
+      <div id="my-pdf"></div>
+    </div>
+  </section>
+
+  <section class="ftco-section ftco-no-pb ftco-no-pt">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 " style="margin-top: 20px; margin-bottom: 20px;">
+          
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13122.87019297945!2d135.4873426035128!3d34.68707748773234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e79893b09f91%3A0x43bc4bacbbdfda1f!2s1-ch%C5%8Dme-10-7%20Utsubohonmachi%2C%20Nishi%20Ward%2C%20Osaka%2C%20550-0004!5e0!3m2!1szh-CN!2sjp!4v1712912387635!5m2!1szh-CN!2sjp"
+            width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+      </div>
+  </section>
+
+  <footer class="ftco-footer ftco-section">
+    <div class="container">
+      <!--
+      <div class="row mb-5">
+
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">ＴＧマネジメント</h2>
+            <ul class="list-unstyled">
+              <div onclick="showDialog()">
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>〒542-0073 大阪市中央区</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>&nbsp;日本橋1-14-13 </a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>TEL （申請中）</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>E-mail info@tg-m.co.jp</a></li>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">コミュニティ</h2>
+            <ul class="list-unstyled">
+              <div onclick="showDialog()">
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>物件情報検索</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>内見予約機能</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>物件データ連動</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>レビュー</a></li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">私たちの物語</h2>
+            <ul class="list-unstyled">
+              <div onclick="showDialog()">
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>チームの紹介</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>キャリア</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>メンバー応募</a></li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">会社情報</h2>
+            <ul class="list-unstyled">
+              <div onclick="showDialog()">
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>会社概要</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>経営理念・クレド</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>採用情報</a></li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">ご質問</h2>
+            <ul class="list-unstyled">
+              <div onclick="showDialog()">
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>よくある質問</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>お問合せ</a></li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    -->
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p>Copyright &copy; 2024 TGM All rights reserved.<a target="_blank"></a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function showDialog() {
+      event.preventDefault();
+      document.getElementById('dialog').style.display = "flex";
+    }
+
+    function closeDialog() {
+      event.preventDefault();
+      document.getElementById('dialog').style.display = "none";
+    }
+  </script>
+
+  <script>
+    const dropdown = document.querySelector('.dropdown');
+
+    dropdown.addEventListener('click', () => {
+      const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+
+      if (dropdownMenu.classList.contains('show')) {
+        dropdownMenu.classList.remove('show');
+      } else {
+        dropdownMenu.classList.add('show');
+      }
+    });
+  </script>
+
+
+
+  <!-- 轮播图片 -->
+  <script>
+    const sliderContainer = document.querySelector('.slider-container');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+
+    // 假设图片目录为 'images/'
+    const imageDir = 'hp_data/object-info/005/';
+
+    // 读取图片目录下的所有图片文件
+    const imageFiles = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg","08.jpg", "09.jpg", "10.jpg", "11.jpg", "12.jpg"];
+    // 可以使用 Node.js 的 fs 模块或其他方式读取文件列表
+
+    // 创建图片元素并添加到容器中
+    imageFiles.forEach(file => {
+      const img = document.createElement('img');
+      img.src = `${imageDir}${file}`;
+      img.style.display = 'none';
+      sliderContainer.appendChild(img);
+    });
+
+    const images = document.querySelectorAll('.slider-container img');
+    let currentIndex = 0;
+
+    // 显示当前图片
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.style.display = (i === index) ? 'block' : 'none';
+      });
+    }
+
+    // 初始化显示第一张图片
+    showImage(currentIndex);
+
+    // 上一张按钮点击事件
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    });
+
+    // 下一张按钮点击事件
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    });
+  </script>
+
+  <style>
+    .slider {
+      width: 100%;
+      height: 500px;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .slider-container {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .slider-container img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      display: none;
+    }
+
+    .slider-controls {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+  <!-- 轮播图片 -->
+
+  <script src="https://unpkg.com/pdfobject"></script>
+  <script>
+
+        var pdfUrl = "hp_data/object-info/005/01.pdf";
+        var pdfOpenParams = {
+            pagemode: "none",
+            toolbar: "true",
+            statusbar: "true",
+            navpanes: "true",
+            scrollbars: "true",
+            view: "FitV",
+            pagemode: "thumbs"
+        };
+
+
+    PDFObject.embed(pdfUrl, "#my-pdf",pdfOpenParams);
+  </script>
+
+  <style>
+    /* .nav-item a:focus {
+  			background-color: #000;
+  		} */
+
+    .dropdown-menu.show {
+      display: block;
+    }
+
+    .dropdown-menu {
+      display: none;
+    }
+
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-link:hover {
+      cursor: pointer;
+    }
+
+    .navbar {
+      position: fixed;
+      left: 0;
+      z-index: 100;
+      background-color: #000000 !important;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .navbar.scrolled {
+      background-color: #000000 !important;
+      /* color: #ffffff !important; */
+    }
+
+    .navbar.scrolled .nav-link {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-brand {
+        position: static;
+      }
+    }
+
+    .navbar .nav-item .nav-link .active {
+      color: #ffffff !important;
+      /* 设置字体颜色为白色  !important */
+    }
+
+    .navbar .nav-link {
+      color: #ffffff
+    }
+  </style>
+  <style>
+    #dialog {
+      display: none;
+      /* 默认情况下，对话框是隐藏的 */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 656px;
+      height: 480px;
+      background-color: #B0E0E6;
+      z-index: 10;
+      justify-content: center;
+      align-items: center;
+      /* background-image: url(images/kojitou.png); */
+    }
+
+    #dialog .dialog-content {
+      width: 50%;
+      height: 50%;
+      text-align: center;
+      /* background-color: #808080;  */
+      background-color: #B0E0E6;
+    }
+
+    #dialog .close-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    #dialog .close-button:hover {
+      color: #000;
+    }
+
+    #dialog img {
+      margin: 0 auto;
+      /* width: 328px;
+  			height: 240px; */
+    }
+  </style>
+  <style>
+    ul.news-list li {
+      position: relative;
+    }
+
+    ul.news-list li::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      /* 调整横线的位置 */
+      width: 100%;
+      height: 2px;
+      background-color: #E7EEED;
+      /* 横线的颜色 */
+    }
+
+    /* 加大 <li> 标签之前的宽度 */
+    ul.news-list li {
+
+      list-style: none;
+      display: block;
+      list-style: none;
+      /* padding-left: 0; */
+      /* 可选：如果您还想移除缩进，可以设置为 0 */
+      padding-left: 40px;
+
+      padding-top: 10px;
+      /* 调整上内部间距 */
+      padding-bottom: 10px;
+      /* 调整下内部间距 */
+
+      /* 调整宽度 */
+    }
+  </style>
+  <style>
+    .news-list li:first-child h2 {
+      display: none;
+    }
+
+    /* section.ftco-section {
+      border-bottom: 1px solid #999;   调整边界的宽度和颜色 
+     
+    } */
+  </style>
+
+  <style>
+    td {
+      font-size: 20px;
+      /* color: red; */
+    }
+  </style>
+
+
+  <style>
+    .pdfobject-container {
+      height: 750px;
+      border: 1px solid #ccc;
+    }
+  </style>
+
+</body>
+
+</html>
